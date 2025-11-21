@@ -90,7 +90,10 @@ def renderPage2():
         view_pprint = pprint.pformat(session['user_data']['user_view_type'])#format the user data nicely
         followers_pprint = pprint.pformat(session['user_data']['followers_url'])#format the user data nicely
     else:
-        user_data2_pprint = '';
+        url_pprint = '';
+        login_pprint = '';
+        view_pprint = '';
+        followers_pprint = '';
     return render_template('page2.html',specific1_user_data=url_pprint,specific2_user_data=login_pprint,specific3_user_data=view_pprint,specific4_user_data=followers_pprint)
 
 #the tokengetter is automatically called to check who is logged in.
